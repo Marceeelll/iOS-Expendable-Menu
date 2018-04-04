@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExpendableMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="9" translatesAutoresizingMaskIntoConstraints="NO" id="vSs-ik-Oxu">
+                                <rect key="frame" x="14" y="485" width="347" height="31"/>
+                                <connections>
+                                    <action selector="numberOfExpendableButtonsAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="WLk-gO-XoO"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of expendable Buttons: 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F6x-aL-WRZ">
+                                <rect key="frame" x="16" y="456" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="90" minValue="0.0" maxValue="360" translatesAutoresizingMaskIntoConstraints="NO" id="isR-lw-JAS">
+                                <rect key="frame" x="14" y="552" width="347" height="31"/>
+                                <connections>
+                                    <action selector="startDegreeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="2MU-tB-aFi"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Degree: 90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jm3-2K-qon">
+                                <rect key="frame" x="16" y="523" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Direction: .top" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFD-dl-OZr">
+                                <rect key="frame" x="16" y="590" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="eoy-je-eSJ">
+                                <rect key="frame" x="16" y="619" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Top"/>
+                                    <segment title="Right"/>
+                                    <segment title="Bottom"/>
+                                    <segment title="Left"/>
+                                </segments>
+                                <connections>
+                                    <action selector="startDegreeSegmentedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="njR-eO-MHn"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YAD-PY-6YE" customClass="MenuButton" customModule="ExpendableMenu" customModuleProvider="target">
+                                <rect key="frame" x="162" y="174" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="expendableMenuButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PZX-Cq-ytb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="isR-lw-JAS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2J7-UW-eWq"/>
+                            <constraint firstItem="eoy-je-eSJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HVL-Na-QYY"/>
+                            <constraint firstItem="KFD-dl-OZr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IBU-XF-9rY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eoy-je-eSJ" secondAttribute="bottom" constant="20" id="JZu-uh-291"/>
+                            <constraint firstItem="isR-lw-JAS" firstAttribute="top" secondItem="Jm3-2K-qon" secondAttribute="bottom" constant="8" id="MDt-p4-t2f"/>
+                            <constraint firstItem="vSs-ik-Oxu" firstAttribute="top" secondItem="F6x-aL-WRZ" secondAttribute="bottom" constant="8" id="MaY-5i-KYW"/>
+                            <constraint firstItem="Jm3-2K-qon" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OOV-l1-3t4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eoy-je-eSJ" secondAttribute="trailing" constant="16" id="VS3-yK-bdx"/>
+                            <constraint firstItem="KFD-dl-OZr" firstAttribute="top" secondItem="isR-lw-JAS" secondAttribute="bottom" constant="8" id="VSU-sy-U1d"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vSs-ik-Oxu" secondAttribute="trailing" constant="16" id="WLS-Ea-nXN"/>
+                            <constraint firstItem="Jm3-2K-qon" firstAttribute="top" secondItem="vSs-ik-Oxu" secondAttribute="bottom" constant="8" id="Zyy-Il-OcL"/>
+                            <constraint firstItem="eoy-je-eSJ" firstAttribute="top" secondItem="KFD-dl-OZr" secondAttribute="bottom" constant="8" id="aXM-O1-jJ7"/>
+                            <constraint firstItem="vSs-ik-Oxu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hHa-4e-VfQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="isR-lw-JAS" secondAttribute="trailing" constant="16" id="iEX-IE-Lew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F6x-aL-WRZ" secondAttribute="trailing" constant="16" id="kuo-qJ-HOA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KFD-dl-OZr" secondAttribute="trailing" constant="16" id="v23-O6-NM8"/>
+                            <constraint firstItem="F6x-aL-WRZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wm7-MC-aZd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jm3-2K-qon" secondAttribute="trailing" constant="16" id="xJu-TP-KyB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel1" destination="F6x-aL-WRZ" id="cmb-HA-gVs"/>
+                        <outlet property="descriptionLabel2" destination="Jm3-2K-qon" id="eAA-W0-nIf"/>
+                        <outlet property="descriptionLabel3" destination="KFD-dl-OZr" id="WCr-7Z-cu2"/>
+                        <outlet property="expendableMenuButton" destination="YAD-PY-6YE" id="Ab8-P0-9ej"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
